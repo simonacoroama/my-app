@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +35,23 @@
   to {
     transform: rotate(360deg);
   }
+}
+#deals {
+  display: flex;        /* Flex layout so items have equal height  */
+  flex-flow: row wrap;  /* Allow items to wrap into multiple lines */
+}
+.sale-item {
+  display: flex;  
+  border: 1px;  
+  border-style: solid;
+  margin:2px;  
+  padding: 5px;  /* Lay out each item using flex layout */
+  flex-flow: column;    /* Lay out item’s contents vertically  */
+}
+.sale-item > img {
+  order: -1;            /* Shift image before other content (in visual order) */
+  align-self: center;   /* Center the image cross-wise (horizontally)         */
+}
+.sale-item > button {
+  margin-top: auto;     /* Auto top margin pushes button to bottom */
 }
